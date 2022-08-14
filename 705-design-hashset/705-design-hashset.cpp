@@ -1,7 +1,7 @@
 class MyHashSet {
 public:
     vector<list<int>> m;
-    int size = 100;
+    int size = 1000;
     MyHashSet() {
         m.resize(size);
     }
