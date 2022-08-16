@@ -1,12 +1,11 @@
 class Solution {
 public:
     char repeatedCharacter(string s) {
-        unordered_map<char,int> map;
+        multiset<char> set;
         for(auto &x:s){
-            map[x]++;
-            if(map[x]>=2) return x;
+            set.insert(x);
+            if(set.count(x)>=2) return x;
         }
         return 'a';
-            
     }
 };
