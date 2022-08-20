@@ -10,8 +10,9 @@
  * };
  */
 class Solution {
-public:
+    private:
      vector<int> ans;
+     public:
      void Inorder(TreeNode *temp){
          if(!temp){
              return;
