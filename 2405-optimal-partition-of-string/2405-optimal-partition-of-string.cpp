@@ -1,7 +1,7 @@
 class Solution {
 public:
     int partitionString(string s) {
-        set<char> set;
+        unordered_set<char> set;
         int count(0);
         for(int i=0;i<s.size();++i){
             if(set.find(s[i])!=set.end()){
