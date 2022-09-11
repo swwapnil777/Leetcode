@@ -10,9 +10,6 @@ public:
             }
             set.insert(s[i]);
         }
-        if(set.size()>=1){
-            count = count+1;
-        }
-        return count;
+        return set.size()!=0?count+1:count;
     }
 };
