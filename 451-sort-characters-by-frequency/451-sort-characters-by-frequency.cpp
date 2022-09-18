@@ -1,21 +1,19 @@
 class Solution {
 public:
     string frequencySort(string s) {
-        unordered_map<char,int> m;
-        
-        for(auto i:s)++m[i];
-        
-        s="";
-        
-        vector<pair<int,char>> v;
-        
-        for(auto i:m)v.push_back({i.second,i.first});
-        
-        sort(v.begin(),v.end(),greater<pair<int,char>>());
-        
-        for(auto i:v)
-            s+=string(i.first,i.second);
-        
-        return s;
+        unordered_map<char,int> map;
+        for(auto x:s){
+            ++map[x];
+        }
+        vector<pair<int,char>> freq;
+        for(auto x:map){
+            freq.push_back({x.second,x.first});
+        }
+        sort(freq.begin(),freq.end(),greater<pair<int,char>>());
+        s = "";
+        for(auto x:freq){
+            s+=string(x.first,x.second);
+        }
+        return s; 
     }
 };
